@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* 选择li 标签 的 第一个 li */
+        li:first-child{
+            background-color: brown;
+        }
+        /* 选择li 标签 的 最后一个 li */
+        li:last-child{
+            background-color: aqua;
+        }
+        /* 选择li 标签 的 第四个 li */
+        li:nth-child(4){
+            font-size: larger;
+            font-style: italic;
+        }
+        /* 选择所有的偶数 */
+        li:nth-child(2n){
+            background-color: blue;
+        }
+        /* 选择所有的奇数 */
+        li:nth-child(2n+1){
+            background-color: black;
+        }
+    </style>
+</head>
+<body>
+    <ol>
+        <li>aaa</li>
+        <li>aaa</li>
+        <li>aaa</li>
+        <li>aaa</li>
+        <li>aaa</li>
+        <li>aaa</li>
+        <li>aaa</li>
+        <li>aaa</li>
+        <li>aaa</li>
+        <li>aaa</li>
+    </ol>
+    <ul>
+        <li>bbb</li>
+        <li>bbb</li>
+        <li>bbb</li>
+        <li>bbb</li>
+        <li>bbb</li>
+    </ul>
+
+    <h3>:nth-child 的公式</h3>
+    <p>作用：根据元素的结构关系查找多个元素</p>
+    <table border="2">
+        <tr>
+            <th>功能</th>
+            <th>公式（n是从0开始）</th>
+        </tr>
+        <tr>
+            <td>查找偶数标签</td>
+            <td>2n</td>
+        </tr>
+        <tr>
+            <td>查找奇数标签</td>
+            <td>2n+1； 2n-1</td>
+        </tr>
+        <tr>
+            <td>找到X的倍数的标签</td>
+            <td>Xn</td>
+        </tr>
+        <tr>
+            <td>找到第X个以后的标签</td>
+            <td>n+X</td>
+        </tr>
+        <tr>
+            <td>找到第X个以前的标签</td>
+            <td>-n+5</td>
+        </tr>
+    </table>
+    <ul>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+    </ul>
+</body>
+</html> 

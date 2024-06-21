@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div{
+            width: 600px;
+            height: 500px;
+            color: pink;
+        }
+        div::before{
+            content: "Little po";
+            background-color: rgba(255, 192, 203, 0.425);
+            width: 150px;
+            height: 150px;
+            display: inline-block;
+        }
+        div::after{
+            content: "Big bao";
+            background-color: rgb(155, 32, 53);
+            width: 150px;
+            height: 150px;
+            display: inline-block;
+        }
+    </style>
+</head>
+<body>
+    <h3>伪元素选择器</h3>
+    <p>作用：创建 虚拟 元素（为元素），用来拜访装饰性的内容（留白/空间等）</p>
+    <table border="2">
+        <tr>
+            <th>选择器</th>
+            <th>说明</th>
+        </tr>
+        <tr>
+            <td>E::before</td>
+            <td>在E元素里面最前面添加一个伪元素</td>
+        </tr>
+        <tr>
+            <td>E::after</td>
+            <td>在E元素里面最后面添加一个伪元素</td>
+        </tr>
+    </table>
+    <br>
+    <br>
+    <br>
+    <div>love</div>
+</body>
+</html>

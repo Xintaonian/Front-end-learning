@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .d1{
+            width: 200px;
+            height: 200px;
+            background-color: pink;
+            /* 添加文字 到达边缘的距离 (内边距）但是盒子本身有变大*/
+            padding:20px;
+            /* 添加边框线 */
+            border: 1px solid #000;
+            /* 盒子外侧 （外边距）产生了 空白距离 拉开两个盒子之间的距离*/
+            margin: 50px;
+        }
+        .d2{
+            width: 200px;
+            height: 200px;
+            background-color: pink;
+            border: 3px dashed #000;
+            margin: 50px;
+        }
+        .d3{
+            width: 200px;
+            height: 200px;
+            background-color: pink;
+            margin: 50px;
+            border-top: 3px dotted #000;
+            border-left: 3px solid #000;
+            border-right: 3px dashed #000;
+        }
+        th{
+            background-color: gray;
+        }
+        .d4{
+            width: 300px;
+            height: 300px;
+            background-color: pink;
+            border: 1px solid #000;
+            /* 内容到达左边框的距离为 总宽度的50% 切记内容不是单单指文字 而是原本整个div*/
+            padding-left: 50%;
+            /* 内容到达上边框的距离为  150像素单位 */
+            padding-top: 150px;
+        }
+        .d5{
+            background-color: pink;
+            width: 200px;
+            height: 200px;
+            padding: 20px;
+            /* 内减模式 */
+            box-sizing: border-box;
+        }
+        .d6{
+            background-color: pink;
+            width: 300px;
+            height: 300px;
+            /* 版心剧中 */
+            margin: auto;
+        }
+        .d7{
+            width: 200px;
+            height: 100px;
+            background-color: pink;
+            /* 超出就隐藏 ！！！！ 最常见 最常使用 */
+            /* overflow: hidden; */
+            /* 超出不显示 有滚动条 纵横都有滚动条 */
+            /* overflow: scroll; */
+            /* 超出不显示 有滚动条 不超出则无滚动条 哪个方向超出 则产生滚动条*/
+            overflow: auto;
+
+        }
+
+        .father1{
+            width: 300px;
+            height: 300px;
+            background-color: pink;
+        }
+        .son1{
+            width: 100px;
+            height: 100px;
+            background-color: red;
+            /* 子级会拖拽父级一起向下移动50px */
+            margin-top: 50px;
+        }
+        .father2{
+            width: 300px;
+            height: 300px;
+            background-color: pink;
+            padding-top: 50px;
+            box-sizing: border-box ;
+        }
+        .son2{
+            width: 100px;
+            height: 100px;
+            background-color: red;
+        }
+        .d8{
+            width: 200px;
+            height: 200px;
+            border-radius: 10px 40px 80px 20px;
+            background-color: orange;
+        }
+    </style>
+</head>
+<body>
+    <h3>盒子模型 - 组成</h3>
+    <p>盒子模型的重要组成部分：</p>
+    <ul>
+        <li>内容区域 - width & height</li>
+        <li>内边距 - padding （出现在内容 与 盒子边缘之间）</li>
+        <li>边框线 - border</li>
+        <li>外边距 - margin （出现盒子外面 拉开两个盒子之间的距离）</li> 
+    </ul>
+    <div class="d1">div Label 1</div>
+    <div class="d2">div label 2</div>
+    <div class="d3">div label 3</div>
+    <h3>盒子模型 - 边框线</h3>
+    <p>属性名 ： border（bd）</p>
+    <p>属性值： 边框线粗细 线条样式 颜色</p>
+    <p>拓展知识： 设置单方向边框线</p>
+    <p>属性名：border + 方向名字（left top right bottom）从而设置每个方向不同的边框线模式</p>
+    <p>常用的线条模式：</p>
+    <table border="1">
+        <tr>
+            <th>属性值</th>
+            <th>线条样式</th>
+        </tr>
+        <tr>
+            <td>solid</td>
+            <td>实线</td>
+        </tr>
+        <tr>
+            <td>dashed</td>
+            <td>虚线</td>
+        </tr>
+        <tr>
+            <td>dotted</td>
+            <td>点线</td>
+        </tr>
+    </table>
+
+    <h3>盒子模型 - 内边距</h3>
+    <p>作用：设置 内容 与盒子边缘之间的距离</p>
+    <p>属性名： padding / padding - 方位名词（left right top bottom）(设置不同方向的距离)</p>
+    <div class="d4"> 内边距 <img src="demon-slayer-warrior-diablo-iii-0vfi0sp71aixekr2.webp" width="150px"></div>
+    <h3>盒子模型 - 内边距 多值写法</h3>
+    <table border="1">
+        <tr>
+            <th>取值个数</th>
+            <th>示例</th>
+            <th>含义</th>
+        </tr>
+        <tr>
+            <td>一个值</td>
+            <td>padding：10px</td>
+            <td>四个方向内边距均为10px</td>
+        </tr>
+        <tr>
+            <td>四个值</td>
+            <td>padding：10px 20px 30px 40px</td>
+            <td>上：10px 右：20px 下：30px 左：40px （方向为顺时针方向）</td>
+        </tr>
+        <tr>
+            <td>三个值</td>
+            <td>padding：10px 20px 30px</td>
+            <td>上：10px 左右：20px 下：30px</td>
+        </tr>
+        <tr>
+            <td>两个值</td>
+            <td>padding： 10px 20px</td>
+            <td>上下：10px 左右：20px</td>
+        </tr>
+    </table>
+    <br>
+    <h3>盒子模型 - 尺寸计算</h3>
+    <h4>默认情况</h4>
+    <p>盒子尺寸 = 内容尺寸 + border的尺寸 + 内边距尺寸</p>
+    <p>所以加了padding后 盒子会被撑大</p>
+    <p>解决方式：</p>
+    <ul>
+        <li>手动做减法： 剪掉border / padding的尺寸 （宽度 减去 两个border 再减去左右两个padding值 同理高度相同）</li>
+        <li>内减模式： box-sizing：border-box</li>
+    </ul>
+    <div class="d5">内减模式 w200 + h200 padding20 盒子不会撑大</div>
+
+    <h3>盒子模型 - 外边距</h3>
+    <p>作用: 拉开两个盒子之间的距离</p>
+    <p>属性名： margin</p>
+    <p>提示： margin 的 属性值写法（单值与多值），含义与padding 写法相同</p>
+    <p>margin不会撑大盒子</p>
+    <p>版心剧中</p>
+    <div class="d6">版心剧中</div>
+    <br>
+    <h3>清楚默认样式 - 默认的内外编剧</h3>
+    <p>* {margin： 0； padding：o；} 选中所有标签清楚 margin 和 padding</p>
+
+    <h3>盒子模型 - 元素溢出</h3>
+    <p>作用： 控制溢出元素的内容的显示方式</p>
+    <p>属性名：overflow</p>
+    <p>属性值：</p>
+    <table border="1">
+        <tr>
+            <th>属性值</th>
+            <th>效果</th>
+        </tr>
+        <tr>
+            <td>hidden</td>
+            <td>溢出隐藏</td>
+        </tr>
+        <tr>
+            <td>scoll</td>
+            <td>溢出滚动（无论是否溢出，都显示滚动条的位置）</td>
+        </tr>
+        <tr>
+            <td>auto</td>
+            <td>溢出滚动（溢出后才显示滚动条的位置）</td>
+        </tr>
+    </table>
+
+    <br>
+    <br>
+
+    <div class="d7">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Blanditiis hic error accusantium nam quidem modi ipsum doloremque eius in. Nostrum voluptatum laudantium optio esse quo voluptas delectus doloribus odit rerum? Lorem ipsum dolor sit amet, consectetur adipisicing elit. Repellendus, quisquam. Saepe nisi officia voluptas vitae eum ipsa voluptatem non necessitatibus repellendus, veniam voluptates autem alias optio a molestias dolorem perspiciatis? Lorem ipsum dolor sit, amet consectetur adipisicing elit. A distinctio, repellendus, tempore quidem facilis amet adipisci id placeat non ducimus natus unde officiis sapiente rerum minima laudantium ipsam enim illum!</div>
+
+    <h3>外边距问题 - 合并现象</h3>
+    <p>场景： 垂直排列的兄弟元素，！！！！上下！！！！ margin会合并</p>
+    <p>现象： 取两个margin中较大值的生效 所以设置两个盒子之间的margin时 只需要给其中一个设置就好</p>
+
+    <h3>外边距问题 - 塌陷问题</h3>
+    <p>场景： 父子级的标签  子级添加了上外4边距（margin-top）会产生他先问题</p>
+    <p>现象： 导致父级一起被向下拉动</p>
+    <p>示例如下</p>
+    <div class="father1"> 
+        <div class="son1">子级</div>
+    </div>
+    <p>解决方式：</p>
+    <ul>
+        <li>推荐使用 ！！！：取消子级的外边距margin， 取而代之 为 父级设置内边距padding</li>
+        <li>父级设置overfloww：hidden</li>
+        <li>父级设置border-top</li>
+    </ul>
+   <div class="father2">
+        <div class="son2">子级 （取消外边距，给父级添加内边距）</div>
+   </div>
+
+   <h3>行内元素 - 内外边距问题</h3>
+   <p>场景：行内元素添（例如：span）加 margin 和 padding， 无法改变元素 ！！！ 垂直!!!方向的位置 <br> 解决方式：内行内元素添加 ling-height 可以改变垂直的位置</p>
+
+   <h3>盒子模型 - 圆角</h3>
+   <p>作用： 设置元素的外边框圆角。<br> 属性名： border-radius <br> 属性值: 数字+px / 百分比 <br>提示：属性值是圆角的半径 <br>设置边框圆角可以同时设置不同的四个角 顺序为 左上角顺时针</p>
+   <img src="圆角半径.png" width="300">
+   <div class="d8">边框圆角</div>
+   <img  src="边框圆角 多值.png" width="500">
+   <br>
+   <br>
+   <ul>
+    <li>常见应用 - 正圆形（头像）</li>
+        <ul>
+            <li>给 ！！正方形！！盒子设置圆角属性值为宽高的一般 / 50%</li>
+            <li><img src="正圆.png" width="150"></li>
+        </ul>
+    <li>常见应用 - 胶囊形状（按钮）</li>
+        <ul>
+            <li>给！！长方形！！盒子设置圆角属性值为盒子高度的一般</li>
+            <li><img src="胶囊.png" width="150"></li>
+        </ul>
+   </ul>
+
+
+</body>
+</html>

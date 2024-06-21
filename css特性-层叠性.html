@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div{
+            color: red;
+            /* 层叠性（叠加） */
+            font-weight: 700;
+        }
+        div{
+            /* 层叠性（覆盖）字体会显示为绿色 */
+            color: green;
+            /* 层叠性（叠加） */
+            font-size: 50px;
+        }
+    </style>
+</head>
+<body>
+    <h2>层叠性</h2>
+    <h5>特点</h5>
+    <ul>
+        <li>相同的属性会覆盖； 后面的CSS属性覆盖前面的CSS属性</li>
+        <li>不同的属性会叠加：不同的CSS属性都会生效</li>
+    </ul>
+    <img src="层叠性.png" width="500">
+    <div>
+        div 标签
+    </div>
+
+</body>
+</html>

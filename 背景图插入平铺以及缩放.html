@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div{
+            width: 500px;
+            height: 300px;
+            background-color: pink;
+
+            background-image: url(her/8.jpg);
+            background-repeat: no-repeat;
+            /* contain 等比例缩放 完全显示图片 但盒子有露白 */
+            /* background-size: contain; */
+            /* cover 等比例缩放 完全覆盖北京 但无法显示全部图片*/
+            /* background-size: cover; */
+            /* 百分比 类似于 cover 100% 图片的宽度和盒子一直 高度则等比缩放 */
+            background-size: 100%;
+        }
+    </style>
+</head>
+<body>
+    <h3>背景图缩放</h3>
+    <p>属性名：backgroun-size （bgz）</p>
+    <p>常见属性值：</p>
+    <ul>
+        <li>关键词</li>
+            <li>Cover： 等比例缩放背景图已完全覆盖背景区域，可能导致背景图部分不可见</li>
+            <li>contain： 等比例缩放背景图以完全装入背景区域，可能背景区域部分空白</li>
+        <li>百分比：根据盒子的尺寸计算图片的大小</li>
+        <li>数字 + 单位 （例如：px）</li>
+    </ul>
+    <div>盒子区域</div>
+</body>
+</html>

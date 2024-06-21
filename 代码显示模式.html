@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* 块级元素： 独占一行 加宽高后生效 宽度默认为父级元素的100% 此处的父级为body 即为整个网页*/
+        div{
+            width: 300px;
+            height: 300px;
+        }
+        .d1{background-color: brown;}
+        .d2{background-color: orange;}
+        /* 行内元素 一行共同存在 尺寸由内容决定 加宽高不生效 */
+        .s1{background-color: brown; width: 300px;
+        height: 100px;}
+        .s2{background-color: orange;}
+        
+    </style>
+</head>
+<body>
+    <!-- 块元素 -->
+     <div class="d1">div 标签</div>
+     <div class="d2">div 标签</div>
+     <!-- 行内元素 -->
+      <span class="s1">Span 标签.......</span>
+      <span class="s2">Span 标签</span>
+      <!-- 行内块元素 一行共同存在 默认尺寸由内容默认尺寸决定 加宽高可以生效-->
+       <img src="her/1.jpg" width="300">
+       <img src="her/2.jpg" width="300">
+
+       <p>如果想要确认标签的显示模式 1. 写两个相同标签 确认是否独占一行 2.默认宽度是多大 3.是否加宽高可以生效</p>
+</body>
+</html>
