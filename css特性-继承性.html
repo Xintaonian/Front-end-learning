@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* 为所有的文字设置颜色 字体 加粗 ----继承性 */
+        body{
+            font-family: Arial, Helvetica, sans-serif;
+            font-weight: 700;
+            color: blueviolet;
+        }
+        a:hover{
+            color: brown;
+        }
+    </style>
+</head>
+<body>
+   <h3>继承性</h3> 
+   <p>继承性：子级默认继承父级的文字控制属性</p>
+   <img src="CSS继承性.png" alt="继承性">
+   <p>给整个网页的body 设置字体风格 以及原色 网页中所有的子级文字军继承了该设置的属性</p>
+   <div>这里是 div 标签</div>
+   <ul>
+    <li>1111</li>
+    <li>2222</li>
+    <li>3333</li>
+   </ul>
+   <!-- 如果标签自己有样式则只生效自己的样式，不继承父级的属性 例如：超链接标签！！！ 超链接不会继承字体的颜色 -->
+    <img src="超链接标签的继承性.png" width="800" >
+    <br>
+   <a href="#">按钮标签 </a>
+</body>
+</html>

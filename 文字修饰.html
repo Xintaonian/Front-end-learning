@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .size{
+            /* 字体大小单位px  数值后一定要加单位 不然不生效 默认大小16px */
+            font-size: 20px;
+        }
+        .color{
+            /* 字体颜色 */
+            color: brown;
+        }
+        .weight{
+            /* 400（normal） 为正常； 700（bold） 为加粗 */
+            font-weight: 700;
+        }
+        .style1{
+            /* 文字倾斜 */
+            font-style: italic;
+        }
+        .style2{
+            /* 文字不倾斜 */
+            font-style: normal;
+        }
+        .line{
+            /* 属性值 可以用 数字+px； 或者直接写数字没有单位 所表达的意思为当前font-size 属性值的多少倍 */
+            /* 行高的值 = 文字高度 + 上间距 + 下间距 */
+            /* 测量行高值： 一行文字的顶部 至 下一行文字的顶部 */
+            line-height: 2;
+        }
+        /* 行高-垂直居中 只要设置 行高属性值=盒子高度属性值 即可实现 文字的垂直居中效果 ！！！！只适用于 单行文字 ！！！！ */
+        .box1 {
+            height: 100px;
+            background-color: blueviolet;
+            line-height: 100px;
+        }
+        .FF{
+            /* font family 可以书写多个字体名 各个字体名用逗号隔开 执行顺序为从左到右 系统会自动查找可用字体，如果含有该字体则执行，反之继续查找 如果都没有则按照默认字体显示 sans-serif 无衬线字体*/
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+        }
+        /* 一次性写文字属性 可以无需填写各个属性 用于网络开发初期 设置 网页整体的文字样式*/
+        .font{
+            font-size: 30px;
+            font-weight: 700;
+            line-height: 2.5;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            color: blue;
+            font-style: italic;
+        }
+        .text{
+            /* 数字 + em 2em = 当前标签文字字符大小 的 2 倍 */
+            text-indent: 2em;
+        }
+        .align{
+            /* center 居中对齐； left（默认） 左对齐； right 右对齐*/
+            /* 只剧中文字内容 不是整个标签（盒子） */
+            text-align: center;
+        }
+        .dec{
+            /* none 无 line-through 删除线 under 下划 over 上划 */
+            text-decoration: underline;
+        }
+        h1{
+            /* rgba 三原色（0-255之间取值） red； green； blue； a 为透明度（0-1 之间取值 值越高 透明度越低） */
+            color: rgba(0, 0, 0, 0.2);
+            background-color: rgb(151, 200, 228);
+        }
+        h2{
+            /* 十六进制颜色 表达含义为 00（red）00（green）00（blue） 取值为 0-f  类似于 rgb去执法*/
+            color: #0000ff;
+        }
+    </style>
+</head>
+<body>
+    <h3 class="weight">123456</h3>
+    <!-- em 标签 为 自动倾斜 段落 添加style normal 后便可 不倾斜-->
+    <em class="style2">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quod quos reiciendis necessitatibus. Odit dolorem numquam animi, dignissimos eos quo vel natus fuga enim neque in laudantium dolorum laborum impedit rerum?</em>
+    <p class="size color">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Fuga, vel blanditiis quibusdam eius iusto minus est facere quia distinctio quo, exercitationem temporibus aperiam, mollitia nostrum unde earum voluptate ab maiores.</p>
+    <p class="weight style1">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ad placeat facilis maiores saepe est esse doloremque obcaecati harum tempore rem veritatis ex eveniet reiciendis optio molestiae ipsam assumenda, nam cumque?</p>
+    <p class="line color">Lorem ipsum dolor sit amet consectetur adipisicing elit. Labore beatae aperiam assumenda fuga fugit eos consequatur laboriosam impedit, id at nihil quidem optio tempora minus ipsa. Rem excepturi commodi nisi?</p>
+    <div class="box1">1234567890</div>
+    <p class="FF">Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolores hic facilis nobis sed iure dolorem assumenda repudiandae earum at veritatis, nihil obcaecati incidunt expedita unde, qui neque pariatur eos eum!.</p>
+    <p class="font">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Placeat maxime, ducimus ab iure ullam non qui consequatur in quibusdam tempore laboriosam voluptatem. Hic nam consequatur sint laborum aut aspernatur impedit.</p>
+    <p class="text">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Molestias, molestiae esse. Dolorem, minus? Dignissimos aspernatur repellat qui, dolorem modi ad quas iste maxime corrupti voluptate provident ab nulla, eos explicabo?</p>
+    <p class="align font">123456</p>
+    <p class="dec">Lorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis tempore vitae pariatur quo animi reprehenderit neque commodi labore, magni ab maxime totam quia nostrum corporis fugit, ratione earum laudantium quasi.</p>
+    <h1>hahahahaha</h1>
+    <h2>lololololo</h2>
+
+</body>
+</html>

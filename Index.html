@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- 外部CSS 引用 -->
+    <link rel="stylesheet" href="style.css">
+    <!-- 内部引用  -->
+    <style>
+        /* 类选择器 设置 */
+        .black{
+            color:black
+        }
+        .size {
+            font-size: 50px;
+        }
+        /* id 选择器 设置 */
+        #pink{
+            color: pink;
+        }
+        /* 通配符选择器 设置以下所有内容 一般只在网页设置初期使用 清楚默认样式 例如 行间距的默认值 等*/
+        *{
+            font-style: initial;
+            font-weight: 900;
+        }
+    </style>
+
+</head>
+<body>
+    <p>change the color</p>
+    <p class="size">change the color 2</p>
+    <p class="black size">change the color 3</p>
+    <!-- 类选择器 作用： 查找标签，差异化设置标签的显示效果 -->
+    <!-- 步骤：1 定义类选择器 - 类名 2. 使用类选择器：标签名添加class=“类名”-->
+    <!-- 一个标签 只能添加一个class 但是每个class 可以添加多个属性值 用空格分隔即可 -->
+    <br><br>
+    <!-- id 选择器 -- #id名   使用id选择器 -- 添加id=“id名” 一般配合JS使用 同一个id 在一个页面只能使用一次-->
+     <div id="pink" class="size">div 标签</div>
+     <!-- 通配符选择器 用于 查找页面所有标签，设置相同的样式 使用*， 不需要调用 浏览器 自动查找页面所有标签并设置为相同样式 -->
+      <p>1234567890</p>
+</body>
+</html>

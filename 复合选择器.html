@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* 后代选择器 */
+        div span{
+            color: brown;
+        }
+        /* 子代选择器 */
+        section1 > span {
+            color: blueviolet;
+        }
+        section1 > p > span{
+            color: red;
+        }
+        /* 子代选择器 内套 并集选择器 */
+        section2 > div, 
+        p, 
+        span{
+            font-weight: 700;
+            font-style: italic;
+            color: rgb(113, 172, 5);
+        }
+        /* 任何标签都可以设置鼠标悬停的状态 ：hover */
+        a:hover{
+            color: black;
+            font-size: large;
+        }
+        /* （class="box"）类标签伪类选择器 */
+        .box:hover{
+            color: red;
+            font-style: italic;
+        }
+        /* 为同一个按钮设置不同的伪类超链接 以下办法可行但是不可取*/
+        /* section3 > a:link {
+            color: aqua;
+        }
+        section3 > a:visited{
+            color: green;
+        }
+        section3 > a:hover{
+            color:blue
+        }
+        section3 > a:active{
+            font-size: larger;
+        } */
+         /* 工作中 一般a标签选择器设置超链接的默认样式，hover状态特殊设置 */
+         a{
+            color:black;
+            text-decoration: none;
+         }
+         a:hover{
+            color: blue;
+            font: 700;
+            font-style: italic;
+         }
+    </style>
+</head>
+<body>
+    <!-- 复合选择器： 有两个或者多个基础选择器，通过不同方式组合而成。 从而更准确更高效的选择目标元素即标签 -->
+    <!-- 后代选择器 选中某元素的后代元素 -->
+    <!-- 后代选择器写法： 父选择器 子选择器{CSS元素属性} 父选择器与子选择器之间用空格进行分割 -->
+     <img src="后代选择器.png" alt="后代选择器写法" width="500">
+    <div>
+        <span>这是div的子标签（儿子）</span>
+        <p>
+            <span>这是div的孙子标签，由于后代选择器会选择所有的后代 这个标签的字体也会变色</span>
+        </p>
+    </div>
+    <img src="子代选择器.png" alt="子代选择器写法" width="500">
+    <br>
+    <!-- 子代选择器：选中某个元素的自带元素（最近的子级） -->
+    <!-- 子代选择器写法： 父选择器 > 子选择器 {CSS 元素属性} 父子级之间用>进行分割-->
+    <section1>
+        <span>这是 section1 的span</span>
+        <p>
+            <span>这是section1 里面 p 的 span</span>
+        </p>
+    </section1>
+    <!-- 并集选择器： 选中多组标签并设置相同的样式 -->
+    <!-- 并集选择器的写法：选择器1，选择器2，选择器3，...,选择器N {CSS元素属性}选择器之间用, 分割 -->
+     <img src="并集选择器.png" alt="并集选择器的写法" width="600">
+     <br>
+     <section2>
+        <div> This is div label</div>
+        <p>This is P label</p>
+        <span>This is span label</span>
+     </section2>
+    <!-- 交集选择器 选中同时满足多个条件的元素 -->
+    <!-- 交集选择器写法： 选择器1选择器2 {CSS元素属性}， 选择器之间连写没有任何空格或符号 -->
+     <!-- 此选择器 用图片来展示 -->
+     <img src="并集选择器.png" alt="子代选择器">
+     <img src="交际选择器的写法.png" alt="子选择器的的写法">
+     <p>注意： 如果交集选择器中有标签选择器（p），标签选择器必须必须书写在最前面。类选择跟在后面（class）既又的关系 既是P 又是 box</p>
+     <!-- 伪类选择器： 伪类选择器表示元素的状态，选中元素的某个状态设置样式 类似于鼠标滑过某处的状态 -->
+    <!-- 鼠标悬停： ：hover{CSS属性} -->
+     <img src="伪类选择器.png" alt="伪类选择器">
+     <br>
+    <a href="#">a 是一个按钮</a>
+    <div class="box">div 是一个标签</div>
+    <br>
+    <img src="./伪类超链接.png" alt="伪类超链接" height="500">
+    <br>
+    <p>注意： 如果设置所有伪类超链接 一定要按照 Link Visited hover active的顺序</p>
+     <section3>
+        <a href="#">这是一个很长的标签 设置所有的伪类链接</a>
+     </section3>
+</body>
+</html>
