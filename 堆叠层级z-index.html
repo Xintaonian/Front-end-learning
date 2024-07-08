@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        div{
+            position: absolute;
+            width: 200px;
+            height: 200px;
+        }
+        .box1{
+            z-index:1 ;
+            background-color: pink;
+        }
+        .box2{
+            left: 100px;
+            top: 100px;
+            background-color: skyblue;
+        }
+    </style>
+</head>
+<body>
+    <h2>堆叠层级 z-index</h2>
+    <p>默认效果： 按照标签的书写顺序， 后来者居上 后写的标签压在先写的标签上</p>
+    <p>作用：设置定位元素的层级顺序，改变定位元素的显示顺序</p>
+    <div class="box1">box 1 zindex 取值越大 位置越靠上 默认值为0</div>
+    <div class="box2">box 2 zindex 默认值为0</div>
+</body>
+</html>

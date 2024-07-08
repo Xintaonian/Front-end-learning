@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        .d1 .pic {
+            position: relative;
+            /* original postion to new postion 
+            original postion not used by other div or elements
+            标签显示模式 不变 如果是 block 就 还是 block */
+            top: 30px;
+            left: 200px;
+        }
+        /* 1.脱标， 不占为
+           2.参照物： 先找最近的已经定位祖先元素； 如果所有的元素都没有定位，参照浏览器可视区改位置
+           3. 绝对定位后 显示模式变为 block 或 inline block */
+        .d2 .news{
+            position: relative;
+
+            margin: 100px auto;
+            width: 400px;
+            height: 350px;
+            background-color: #494848;
+        }
+        .d2 .news img{
+            width: 400px;
+            height: 180px;
+        }
+        .d2 .news span{
+            position: absolute;
+            top: 0;
+            right: 0;
+
+            display: block;
+            width: 92px;
+            height: 32px;
+            background-color: rgba(0,0,0,0.6);
+            text-align: center;
+            line-height: 32px;
+            color: #fff;
+        }
+        .d3 img{
+            position: absolute;
+            left:50%;
+            margin-left: -200px;
+            top: 50%;
+            
+        }
+    </style>
+</head>
+<body>
+    <div class="d1">
+        <h4>定位</h4>
+        <p>作用： 灵活改变盒子在网页中的为位置</p>
+        <br><br>
+        <p>实现</p>
+        <ol>
+            <li>定位模式： postion</li>
+            <li>边偏移： 设置纸盒子的位置</li>
+        </ol>
+        <h4>相对定位</h4>
+        <p>postion: relative</p>
+
+        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Nemo dignissimos reprehenderit iure beatae quod dolores earum atque in praesentium necessitatibus. Non recusandae commodi nesciunt obcaecati vitae accusamus harum natus corrupti. Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempore rerum facilis at ipsa natus in eos facere illum doloribus, modi laboriosam voluptatum quibusdam soluta delectus autem quaerat harum. Provident, fugit? Lorem ipsum dolor, sit amet consectetur adipisicing elit. Veniam qui dignissimos cum at! Porro aspernatur eaque tempora quia ut architecto cumque voluptas doloribus voluptate sequi ipsa provident minus, sint nisi.</p>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Est illum praesentium aliquid hic deleniti veritatis nemo nihil vitae doloribus accusantium voluptatum amet totam tempore ducimus odio a fugit, harum neque.</p>
+        <div class="pic"><img src="her/6.jpg" width="600" ></div>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Minus, vel, repellendus architecto quae sapiente alias quam incidunt cumque, neque excepturi unde. Nemo, doloremque ab ullam quasi iure nesciunt distinctio magnam. Lorem ipsum dolor, sit amet consectetur adipisicing elit. Esse recusandae ipsa ab cupiditate expedita. Eos, eligendi? Debitis exercitationem quasi aspernatur consectetur fugit perspiciatis consequatur? Sed temporibus quibusdam dolorem quis obcaecati?</p>
+    </div>
+    <br><br><br>
+
+
+    <h3>句对定位</h3>
+    <p>position: absolute</p>
+    <p>使用场景：子级绝对定位，父级相对定位 （子绝父相）</p>
+    <p>当子级设置了绝对定位 父级设置相对定位 子级无论如何活动都不会超出父级的范围</p>
+    <br><br>
+
+    <div class="d2">
+        <div class="news">
+            <img src="her/8.jpg" width="400">
+            <span>I love you</span>
+            <h4>这是我的大宝贝</h4>
+            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quo necessitatibus repellendus nesciunt, magni voluptatem hic culpa. Deleniti id possimus minus nisi eius ab eligendi! Eius, accusantium suscipit. Sit, id. In!</p>
+        </div>
+    </div>
+
+    <h3>定位剧中</h3>
+    <p>实现步骤：</p>
+    <ol>
+        <li>绝对定位</li>
+        <li>水平，垂直边偏移为50%</li>
+        <li>子级向左 和 上 移自身尺寸的50%</li>
+            <ul>
+                <li>左 和 上 外边距为 - 尺寸的一半</li>
+                <li>transform: translate(-50% -50%)</li>
+            </ul>       
+    </ol>
+    <p></p>
+    <div class="d3">
+        <img src="her/7.jpg" width="400">
+    </div>
+
+    <h3>固定定位</h3>
+    <p>position: fixed</p>
+    <p>不会滚动</p>
+</body>
+</html>
