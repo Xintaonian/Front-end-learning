@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="iconfont/iconfont.css">
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        li{
+            list-style: none;
+        }
+        .banner{
+            position: relative;
+            width: 564px;
+            height: 754px;
+            /* background-color: pink; */
+            margin: 100px auto;
+            /* hide 2 extra imgs */
+            overflow: hidden;
+            transition: all 1s;
+        }
+        /* test for whole banner section hover and transition */
+        .banner:hover,
+        .banner:hover img{
+            width: 676.8px;
+            height: 904.8px;
+        }
+        .banner ul{
+            /* slideshow from left to right so make sure all imgs on the same line  */
+            display: flex;
+        }
+        .banner img{
+            /* remove the space between the imgs */
+            vertical-align: middle;
+            width: 564px;
+            height: 754px;
+            border-radius: 12px;
+            transition: all 1s;
+        }
+        /* arrow */
+        .banner .prev,
+        .banner .next {
+            display: none;
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            /* if display block abled == disable display none  */
+            /* display: block; */
+            width: 20px;
+            height: 30px;
+            background-color: rgba(0, 0, 0, 0.3);
+            line-height: 30px;
+            color: white;
+            text-decoration: none;
+        }
+        .banner .prev{
+            left:0;
+            border-radius: 0 15px 15px 0;  
+        }
+        .banner .next{
+            right: 0;
+            border-radius: 15px 0 0 15px;
+            text-align: center;
+        }
+        /* combinator */
+        .banner:hover .prev,
+        .banner:hover .next,
+        .banner:hover ol li {
+            /* disable display none */
+            display: block;
+        }
+
+        /* dot */
+        .banner ol{
+            display: flex;
+            position: absolute;
+            bottom: 20px;
+            left: 50%;
+            transform: translateX(-50%);
+            height: 13px;
+            background-color: rgba(255, 255, 255, 0.3);
+            border-radius: 10px;
+        }
+        .banner ol li{
+            display: none;
+            margin: 3px;
+            width: 8px;
+            height: 8px;
+            background-color: white;
+            border-radius: 50%;
+            cursor: pointer;
+        }
+        /* active */
+        .banner ol .active{
+            background-color: #ff5000;
+        }
+    </style>
+</head>
+<body>
+    <div class="banner">
+        <!-- img -->
+         <ul>
+            <li><a href="#"><img src="her/1.jpg" ></a></li>
+            <li><a href="#"><img src="her/5.jpg" ></a></li>
+            <li><a href="#"><img src="her/7.jpg" ></a></li>
+         </ul>
+        <!-- arrow -->
+         <!-- prev -->
+         <a href="#" class="prev">
+            <i class="iconfont icon-arrow-double-left"></i>
+         </a>
+         <!-- next -->
+         <a href="#" class="next">
+            <i class="iconfont icon-arrow-double-right"></i>
+         </a>
+        <!-- dot -->
+         <ol>
+            <li class="active"></li>
+            <li></li>
+            <li></li>
+         </ol>
+    </div>
+</body>
+</html>
