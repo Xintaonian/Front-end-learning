@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <Style>
+        div{
+            position: relative;
+            width: 700px;
+            height: 900px;
+            margin: 0 auto;
+            overflow: hidden;
+        }
+        div img {
+            position: absolute;
+            margin: 50px auto;
+            width: 500px;
+            height: 700px;
+            transition: all 1s;
+        }
+        div:hover img{
+            transform: scale(1.5);
+        }
+    </Style>
+</head>
+<body>
+    <h1>Scale</h1>
+    <ul>
+        <li>differnent with change the W and H</li>
+        <li>transform: scale(X Y)</li>
+        <li>X Y biger 1  == amplify</li>
+        <li>X Y less than 1 == narrow</li>
+    </ul>
+    <div>
+        <img src="her/1.jpg" >
+    </div>
+</body>
+</html>

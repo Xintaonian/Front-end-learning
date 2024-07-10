@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        .bg{
+            display: flex;
+            margin:50px auto;
+            width: 1366px;
+            height: 600px;
+            background-color: pink;
+            /* transition: all 5s; */
+            overflow: hidden;
+        }
+        .bg .left,
+        .bg .right{
+            width: 50%;
+            height: 600px;
+            transition: all 1.5s;
+        }
+        .bg .left{
+            background-color: black;
+        }
+        .bg .right{
+            background-color: red;
+        }
+        .bg:hover .left{
+            transform: translateX(-100%);
+        }
+        .bg:hover .right{
+            transform: translateX(100%);
+        }
+    </style>
+</head>
+<body>
+    <div class="bg">
+        <div class="left"></div>
+        <div class="right"></div>
+    </div>
+</body>
+</html>

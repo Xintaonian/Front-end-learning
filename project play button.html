@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        li{
+            list-style: none;
+        }
+        img{
+            width: 100%;
+        }
+
+        .box{
+            width: 249px;
+            height: 210px;
+            margin: 50px auto;
+        }
+        .box li{
+            overflow: hidden;
+        }
+
+        .box p{
+            color: #3b3b3b;
+            padding: 10px 10px 0 10px;
+        }
+        /* add play button in the middle of the pic */
+        .pic{
+            position: relative;
+        }
+        .pic::after{
+            position: absolute;
+            left: 50%;
+            bottom: 50%;
+            /* Not use transform translate because of the translate: scale */
+            /* transform: translate(-50%, -50%) */
+            margin-left: -29px;
+            margin-top: -29px;
+            content: '';
+            width: 58px;
+            height: 58px;
+            /* I dont have a play button so use bgc  */
+            background-color: orange;
+            border-radius: 50%;
+            transform: scale(10);
+            opacity: 0;
+            transition: all 1s;
+        }
+        .box li:hover .pic::after{
+            transform: scale(1);
+            opacity: 1;
+        }
+        /* add hover before hover opacity = 0 after hover opacity = 1*/
+    </style>
+</head>
+<body>
+    <div class="box">
+        <ul>
+            <li>
+                <div class="pic">
+                    <img src="her/3.jpg" alt="">
+                </div>
+                <p>Aurura -- by Xintao Nian</p>
+            </li>
+        </ul>
+    </div>
+</body>
+</html>

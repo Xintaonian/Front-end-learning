@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .d1{
+            width: 100px;
+            height: 100px;
+            background-color: pink;
+            border-radius: 50%;
+            background-image: radial-gradient(
+                /* circle has only one radius  circle starts at the center of the circle with colour of black end with colour pink */
+                80px at center center,
+                black,
+                pink
+            );
+        }
+        button{          
+            margin-top: 10px;
+            width: 100px;
+            height: 40px;
+            background-color: orange;
+            border: none;
+            border-radius: 25px;
+            background-image: radial-gradient(
+                /* oval has two radius(半径) */
+                30px 20px at center center,
+                rgba(255,255,255,0.2),
+                transparent
+            );
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <div class="d1"></div>
+        <button>click me</button>
+    </div>
+</body>
+</html>
