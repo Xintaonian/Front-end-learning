@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        .nav{
+            width: 300px;
+            margin: 50px auto ;
+        }
+        li{
+            list-style: none;
+        }
+        .nav ul{
+            display: flex;
+        }
+        .nav li{
+            position: relative;
+            width: 100px;
+            height: 40px;
+            line-height: 40px;
+            transition: all 0.5s;
+            transform-style: preserve-3d;
+        }
+        .nav li a{
+            position: absolute;
+            left: 0;
+            top: 0;
+            display: block;
+            width: 100%;
+            height: 100%;
+            text-align: center;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+        }
+        .nav li a:first-child{
+            background-color: green;
+            transform: translateZ(20px);
+        }
+        .nav li a:last-child{
+            background-color: orange;
+            transform: rotateX(90deg) translateZ(20px);
+        }
+        li:hover{
+            transform: rotatex(-90deg);
+        }
+    </style>
+</head>
+<body>
+    <div class="nav"> 
+        <ul>
+            <li>
+                <a href="#">Homepage</a>
+                <a href="#">1st Page</a>
+            </li>
+            <li>
+                <a href="#">Login</a>
+                <a href="#">2nd Page</a>
+            </li>
+            <li>
+                <a href="#">Register</a>
+                <a href="#">3rd Page</a>
+            </li>
+        </ul>
+    </div>
+</body>
+</html>

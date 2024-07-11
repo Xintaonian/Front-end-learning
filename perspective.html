@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .father{
+            perspective: 1000px;
+        }
+        .son{
+            width: 200px;
+            height: 200px;
+            margin: 100px auto;
+            background-color: pink;
+            transition: all 1.5s;
+        }
+        .father:hover .son{
+            transform: translateZ(-300px);
+        }
+    </style>
+</head>
+<body>
+    <h1>Perspective</h1>
+    <p>The perspective property(range 800-1200) is used to give a 3D-positioned element some perspective. The perspective property defines how far the object is away from the user. So, a lower value will result in a more intensive 3D effect than a higher value. When defining the perspective property for an element, it is the CHILD elements that get the perspective view, NOT the element itself.</p>
+    <p>perspective only add to the father element</p>
+    <div class="father">
+        <div class="son"></div>
+    </div>
+    
+</body>
+</html>

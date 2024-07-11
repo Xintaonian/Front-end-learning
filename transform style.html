@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .cube{
+            position: relative;
+            width: 200px;
+            height: 200px;
+            margin: 50px auto;
+            transition: all 2s;
+            transform-style: preserve-3d;
+        }
+        img{
+            width: 200px;
+        }
+        .cube div{
+            position: absolute;
+            left: 0;
+            top: 0;
+            width: 200px;
+            height: 200px;
+        }
+        .front{
+            transform: translateZ(100px);
+        }
+        .back{
+            transform: translateZ(-100px);
+        }
+        .cube:hover {
+            transform: rotateY(90deg);
+        }
+    </style>
+</head>
+<body>
+    <div class="cube">
+        <div class="front"><img src="her/7.jpg" ></div>
+        <div class="back"><img src="her/8.jpg" ></div>
+    </div>
+</body>
+</html>

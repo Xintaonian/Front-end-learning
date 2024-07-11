@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            display: flex;
+            flex-wrap: ;
+        }
+        /* z */
+        .father{
+            width: 300px;
+            margin: 10px ;
+        }
+        img{
+            width: 300px;
+            transition: all 2s;
+        }
+        .son:hover img {
+            transform: rotateZ(360deg);
+        }
+        /* x */
+        .d1{
+            width: 300px;
+            margin: 10px;
+        }
+        .d2{
+            perspective: 1000px;
+        }
+        .d2:hover img{
+            transform: rotateX(60deg);
+        }
+
+        /* y */
+        .a{
+            width: 300px;
+            margin: 10px;
+        }
+        .b{
+            perspective: 1000px;
+        }
+        .b:hover img{
+            transform: rotateY(45deg);
+        }
+
+
+    </style>
+
+
+</head>
+<body>
+    <h3>rotate z </h3>
+    <div class="father">
+        <div class="son"><img src="her/7.jpg" ></div>
+    </div>
+    <h3>rotate x</h3>
+    <div class="d1">
+        <div class="d2"><img src="her/1.jpg" ></div>
+    </div>
+    <h3>roatate y</h3>
+    <div class="a">
+        <div class="b"><img src="her/8.jpg" ></div>
+    </div>
+
+</body>
+</html>
